@@ -1,9 +1,13 @@
 <p>Список планет</p>
 <div>
     <table>
-        <app-planet-list-item
+        <tr *ngFor="let p of planets; index as i">
+            <app-planet-list-item [planet]="p"></app-planet-list-item>
+        </tr>
+
+        <!--<app-planet-list-item
             *ngFor="let p of planets"
             [planet]="p"
-        ></app-planet-list-item>
+        ></app-planet-list-item>-->
     </table>
 </div>
