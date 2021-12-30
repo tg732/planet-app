@@ -1,0 +1,9 @@
+<p>Список планет</p>
+<div>
+    <table>
+        <app-planet-list-item
+            *ngFor="let p of planets"
+            [planet]="p"
+        ></app-planet-list-item>
+    </table>
+</div>
