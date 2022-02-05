@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { Planet, PlanetsService } from '../planets-service.service';
 
 @Component({
@@ -11,11 +11,19 @@ export class PlanetListItemComponent implements OnInit {
   @Input() planet: Planet = {
     name: '',
     population: 0,
-    size: 0
+    diameter: 0,
+    buttonName: '333'
   }
+
+  @Output() onAdd: EventEmitter<Planet> = new EventEmitter<Planet>()
   //constructor(private planetsService: PlanetsService) { }
 
   ngOnInit(): void {
     
   }
+
+  sendPlanet() {
+    this.onAdd.emit(this.planet)
+  }
+  
 }

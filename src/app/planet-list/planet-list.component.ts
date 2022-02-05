@@ -15,22 +15,28 @@ export class PlanetListComponent implements OnInit {
   }
 
   getPlanets() {
-    /*this.planetsService.getPlanets()
+    this.planetsService.getPlanets()
     .subscribe(planets => {
-      this.planets = planets
-    })*/
+      this.planets = planets.results
+      console.log(planets.results)
+    })
 
-    this.planets = [
+    /*this.planets = [
       {
         name: '1',
         population: 1,
-        size: 1
+        diameter: 1
       }, 
       {
         name: '2',
         population: 2,
-        size: 2
+        diameter: 2
       }
-    ]
+    ]*/
+  }
+
+  sendToVisitPlanet() {
+    //this.planets
   }
 }
+
