@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Planet, PlanetsService } from '../planets-service.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { Planet, PlanetsService } from '../planets-service.service';
 export class PlanetListComponent implements OnInit {
   planets: Planet[] = []
   constructor(private planetsService: PlanetsService) { }
+  
+  @Output() onSend: EventEmitter<Planet> = new EventEmitter<Planet>()
 
   ngOnInit(): void {
     this.getPlanets()
@@ -33,6 +35,11 @@ export class PlanetListComponent implements OnInit {
         diameter: 2
       }
     ]*/
+  }
+
+  sendPlanet($event: any, p: Planet) {
+    this.onSend.emit(p)
+    //console.log(p)
   }
 
   sendToVisitPlanet() {

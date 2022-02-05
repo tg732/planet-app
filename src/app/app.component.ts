@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Planet } from './planets-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'planet-app';
+
+  updatePlanet(planet: Planet) {
+    console.log("Planet: ", planet)
+  }
 }

@@ -15,15 +15,16 @@ export class PlanetListItemComponent implements OnInit {
     buttonName: '333'
   }
 
-  @Output() onAdd: EventEmitter<Planet> = new EventEmitter<Planet>()
+  //@Output() onSend: EventEmitter<Planet> = new EventEmitter<Planet>()
   //constructor(private planetsService: PlanetsService) { }
 
   ngOnInit(): void {
     
   }
 
-  sendPlanet() {
-    this.onAdd.emit(this.planet)
-  }
+  /*sendPlanet($event: any) {
+    this.onSend.emit(this.planet)
+    console.log(this.planet)
+  }*/
   
 }

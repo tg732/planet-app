@@ -18,7 +18,10 @@
             <td>
                 {{p.population}}
             </td>
-            <td><app-planet-list-item [planet]="p"></app-planet-list-item></td>
+            <td>
+                <button (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
+            </td>
+            <!-- <td><app-planet-list-item [planet]="p"></app-planet-list-item></td> -->
         </tr>
 
         <!--<app-planet-list-item
