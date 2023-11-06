@@ -19,7 +19,7 @@
                 {{p.population}}
             </td>
             <td>
-                <button (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
+                <button [disabled]="p.isDisabled" (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
             </td>
             <!-- <td><app-planet-list-item [planet]="p"></app-planet-list-item></td> -->
         </tr>
@@ -27,6 +27,6 @@
         <!--<app-planet-list-item
             *ngFor="let p of planets"
             [planet]="p"
-        ></app-planet-list-item>-->
+        ></app-planet-list-item>		[disabled]={{p.isDisabled}}-->
     </table>
 </div>

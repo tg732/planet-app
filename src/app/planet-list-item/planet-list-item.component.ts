@@ -12,7 +12,8 @@ export class PlanetListItemComponent implements OnInit {
     name: '',
     population: 0,
     diameter: 0,
-    buttonName: '333'
+    buttonName: '',
+    isDisabled: false
   }
 
   //@Output() onSend: EventEmitter<Planet> = new EventEmitter<Planet>()

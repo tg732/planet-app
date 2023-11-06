@@ -21,6 +21,10 @@ export class PlanetListComponent implements OnInit {
     .subscribe(planets => {
       this.planets = planets.results
       console.log(planets.results)
+	  this.planets.forEach((p) => { 
+	    p.buttonName = 'Хочу посетить'
+		p.isDisabled = false 
+	  })
     })
 
     /*this.planets = [

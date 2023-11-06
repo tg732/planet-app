@@ -16,7 +16,8 @@ export interface Planet {
   name: string
   population: number
   diameter: number,
-  buttonName:string
+  buttonName:string,
+  isDisabled: boolean
 }
 
 @Injectable({

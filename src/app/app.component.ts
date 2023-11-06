@@ -12,6 +12,8 @@ export class AppComponent {
 
   updatePlanet(planet: Planet) {
     console.log("Planet: ", planet)
+    planet.buttonName = 'В списке'
+    planet.isDisabled = true
     this.planets.unshift(planet)
   }
 }
