@@ -19,7 +19,7 @@
                 {{p.population}}
             </td>
             <td>
-                <button [disabled]="p.isDisabled" (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
+                <button (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
             </td>
             <!-- <td><app-planet-list-item [planet]="p"></app-planet-list-item></td> -->
         </tr>
