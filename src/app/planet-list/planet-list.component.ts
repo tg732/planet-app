@@ -21,10 +21,10 @@ export class PlanetListComponent implements OnInit {
     .subscribe(planets => {
       this.planets = planets.results
       console.log(planets.results)
-	  this.planets.forEach((p) => { 
-	    p.buttonName = 'Хочу посетить'
-		p.isDisabled = false 
-	  })
+      this.planets.forEach((p) => { 
+        p.buttonName = 'Хочу посетить'
+        p.class = "btn btn-outline-dark col-5" 
+      })
     })
 
     /*this.planets = [

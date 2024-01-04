@@ -1,19 +1,11 @@
-<p>Хочу посетить</p>
-<table border="4" bordercolor="#000000" cellspacing="0" cellpadding="0"width= "400" height="150" align=center>
+<h3>Хочу посетить</h3>
+<table class="table">
     <tr>
         <th>Наименование</th>
-        <th>Диаметр, мм.</th>
-        <th>Население, млн. чел.</th>
     </tr>
     <tr *ngFor="let p of planets; index as i">
         <td>
             {{p.name}}
-        </td>
-        <td>
-            {{p.diameter}}
-        </td>
-        <td>
-            {{p.population}}
         </td>
     </tr>
 

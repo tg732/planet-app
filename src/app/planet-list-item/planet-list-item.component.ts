@@ -8,13 +8,13 @@ import { Planet, PlanetsService } from '../planets-service.service';
 })
 export class PlanetListItemComponent implements OnInit {
   //planets: Planet[] = []
-  @Input() planet: Planet = {
+  /*@Input() planet: Planet = {
     name: '',
     population: 0,
     diameter: 0,
     buttonName: '',
-    isDisabled: false
-  }
+    class: 'btn btn-outline-dark col-5'
+  }*/
 
   //@Output() onSend: EventEmitter<Planet> = new EventEmitter<Planet>()
   //constructor(private planetsService: PlanetsService) { }

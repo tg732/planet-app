@@ -1,6 +1,6 @@
-<p>Список планет</p>
+<h3>Список планет</h3>
 <div>
-    <table border="4" bordercolor="#000000" cellspacing="0" cellpadding="0"width= "400" height="150" align=center>
+    <table class="table">
         <tr>
             <th>Наименование</th>
             <th>Диаметр, мм.</th>
@@ -19,7 +19,7 @@
                 {{p.population}}
             </td>
             <td>
-                <button (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
+                <button [class]="p.class" (click)="sendPlanet($event, p)">{{p.buttonName}}</button>
             </td>
             <!-- <td><app-planet-list-item [planet]="p"></app-planet-list-item></td> -->
         </tr>

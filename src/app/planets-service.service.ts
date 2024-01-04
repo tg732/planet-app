@@ -12,12 +12,11 @@ export interface PlanetsResponse {
 }
 
 export interface Planet {
-  // имя, население в млн.(т.е не 10000000, а 10 млн.) и размер планеты
   name: string
   population: number
   diameter: number,
   buttonName:string,
-  isDisabled: boolean
+  class: string;
 }
 
 @Injectable({
